@@ -46,6 +46,8 @@ public class AddingStock extends javax.swing.JPanel {
         jdelete = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         lMessage = new javax.swing.JLabel();
+        jexp = new javax.swing.JButton();
+        jimp = new javax.swing.JButton();
 
         jtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -100,6 +102,15 @@ public class AddingStock extends javax.swing.JPanel {
 
         lMessage.setForeground(new java.awt.Color(255, 51, 51));
 
+        jexp.setText("Export");
+        jexp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jexpActionPerformed(evt);
+            }
+        });
+
+        jimp.setText("Import");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -115,10 +126,15 @@ public class AddingStock extends javax.swing.JPanel {
                                     .addComponent(jLabel2)
                                     .addComponent(lMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jdelete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jadd, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jUpdate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jdelete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jadd, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jUpdate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(80, 80, 80)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jexp)
+                                    .addComponent(jimp)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addComponent(jLabel3)
@@ -127,7 +143,7 @@ public class AddingStock extends javax.swing.JPanel {
                             .addComponent(jname)
                             .addComponent(jprice)
                             .addComponent(jcat, 0, 111, Short.MAX_VALUE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(166, 166, 166))
             .addGroup(layout.createSequentialGroup()
@@ -153,9 +169,13 @@ public class AddingStock extends javax.swing.JPanel {
                     .addComponent(jLabel3)
                     .addComponent(jprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jadd)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jadd)
+                    .addComponent(jexp))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jUpdate)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jUpdate)
+                    .addComponent(jimp))
                 .addGap(29, 29, 29)
                 .addComponent(jdelete)
                 .addGap(26, 26, 26))
@@ -224,6 +244,10 @@ public class AddingStock extends javax.swing.JPanel {
        }
     }//GEN-LAST:event_jdeleteActionPerformed
 
+    private void jexpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jexpActionPerformed
+        
+    }//GEN-LAST:event_jexpActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
@@ -235,6 +259,8 @@ public class AddingStock extends javax.swing.JPanel {
     private javax.swing.JButton jadd;
     private javax.swing.JComboBox<String> jcat;
     private javax.swing.JButton jdelete;
+    private javax.swing.JButton jexp;
+    private javax.swing.JButton jimp;
     private javax.swing.JTextField jname;
     private javax.swing.JTextField jprice;
     private javax.swing.JTable jtable;
